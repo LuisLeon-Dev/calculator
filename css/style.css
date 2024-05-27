@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #807ece;
+}
+
+.calculator {
+  background-color: #2d2a37;
+  color: #ebebeb;
+  border-radius: 48px;
+  width: 356px;
+  height: 566px;
+  box-shadow: inset 0 0 2px 0 #fff, 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.display {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.display input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 24px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: none;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #fff;
+  text-align: right;
+}
+
+.display input:focus {
+  border-bottom: 2px solid #6200ea;
+}
+
+.display label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.display input:focus + label,
+.display input:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 12px;
+  color: #6200ea;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+}
+
+.btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: #ebebeb;
+  font-size: 20px;
+  border: none;
+  box-shadow: inset 0 4px 5px rgba(79, 79, 79, 0.2),
+    0 6px 8px rgba(0, 0, 0, 0.1), 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: inset 0 4px 5px rgba(79, 79, 79, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.btn-darker {
+  background-color: #2d2a37;
+}
+.btn-purple {
+  background-color: #462878;
+}
+
+.buttons-block {
+  display: flex;
+  gap: 15px;
+}
